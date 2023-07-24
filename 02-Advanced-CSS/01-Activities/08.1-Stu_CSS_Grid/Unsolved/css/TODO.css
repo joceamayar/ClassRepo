@@ -3,8 +3,11 @@
 
 /* TODO: 5 EQUALLY SIZED COLUMNS, ADD DISPLAY GRID,  200px HEIGHT PER ROW*/
 .container1 {
+
+  display: grid;
   row-gap: 20px;
-  grid-template-columns: ;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:500px 200px 100px;
 
 }
 
@@ -12,8 +15,10 @@
 
 /* TODO: 3 COLUMNS MIDDLE COLUMN TWICE AS LARGE, ADD 50PX GAP 150px HEIGHT PER ROW*/
 .container2 {
-  display: ;
-  grid-template-columns: ;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:300px 300px 300px;
   
 }
 
@@ -22,7 +27,9 @@
 /* TODO: 2 COLUMNS THE FIRST COLUMN 3 TIMES LARGER THAN THE SECOND, ADD 20PX COLUMN GAP */
 .container3 {
   display: grid;
-  grid-template-columns: ;
+  row-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:500px 200px 100px;
 }
 
 /* all code for container 4 */
@@ -30,38 +37,38 @@
 /* TODO: REVERSE THE COLUMNS SO THAT RED AND GREEN ARE SWAPPED ADD 20PX ROW GAPS */
 .container4 {
   display: grid;
-
+  row-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
+  grid-template-rows:20px 20px 20px;
+    "green1 blue1 red1"
+    "green2 blue2 red3"
+    "green3 blue3 red3";
 }
 
-. {
-  grid-area: ;
+.red1 {
+  grid-area:red1;
+}
+.blue1 {
+  grid-area:blue1;
+}
+.green1 {
+  grid-area:green1;
 }
 . {
-  grid-area: ;
+  grid-area:red2;
 }
 . {
-  grid-area: ;
+  grid-area:footer2;
 }
 . {
-  grid-area: ;
+  grid-area:footer3 ;
 }
 . {
-  grid-area: ;
+  grid-area:header1 ;
 }
 . {
-  grid-area: ;
+  grid-area:header2 ;
 }
 . {
-  grid-area: ;
-}
-. {
-  grid-area: ;
-}
-. {
-  grid-area: ;
+  grid-area:header3 ;
 }

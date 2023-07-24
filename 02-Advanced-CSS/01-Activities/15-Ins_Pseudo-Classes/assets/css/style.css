@@ -13,7 +13,7 @@ button {
   border: 3px solid #13293d;
 }
 
-/* The user's cursor is positioned over the element */
+/* The user's cursor is positioned over the element, it works not only for bottons but we can put it for any elements */
 button:hover {
   background-color: #772014;
   color: #fff;
@@ -30,3 +30,4 @@ button:focus {
   outline: none;
   border-color: #8ac4ff;
 }
+

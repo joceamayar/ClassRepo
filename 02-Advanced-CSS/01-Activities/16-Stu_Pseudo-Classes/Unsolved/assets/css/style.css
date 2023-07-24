@@ -73,6 +73,7 @@ aside h2 {
   font-size: 150%;
 }
 
+
 input, button {
   width: 100%;
   margin: 2% 0;
@@ -88,10 +89,15 @@ footer {
 }
 
 /* TODO: Add styles that will hide the resource links by default */
+h3:hover + ul {
 
+  visibility: visible;
+  }
 
 
 /* TODO: Add styles that will display the links when the mouse hovers over the parent element */
+
+
 
 
 

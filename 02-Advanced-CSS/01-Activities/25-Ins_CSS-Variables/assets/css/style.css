@@ -1,7 +1,7 @@
 /* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
 :root {
-  /* declare a variable with `--` syntax */
-  --dark: #13293d;
+  /* declare a variable with `--` syntax  I can access this  other css files */
+  --dark: #1d8b40;
   --light: #fff;
   --navlink-color: #b9c6ae;
 }

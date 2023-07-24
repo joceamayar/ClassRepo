@@ -123,3 +123,24 @@ footer {
     text-align: center;
   }
 }
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00f;
+  cursor:pointer;
+}
+
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 24px;
+    min-width: 200px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: deeppink;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+    z-index: 1;

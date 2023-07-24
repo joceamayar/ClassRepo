@@ -16,7 +16,7 @@ header {
 
 /* 
 What happens when we set the display property to flex? 
-TODO: Write your answer here 
+TODO:  All of the imidiate children become flex-items. Those imidiate children then will e forced onto a horixontal line . 
 */
 nav {
   display: flex;
@@ -32,7 +32,7 @@ nav a {
 
 /* 
 What is the flex-wrap property? 
-TODO: Write your answer here 
+TODO: The flex line property will forece everything in one line, but flexwrap tells the  flext items that if they don't fit in the container then go ahead to the next line. Flex to control whether flex items should wrap onto multiple lines or stay on a single line within a flex container when the container's width is insufficient to accommodate all the items. 
 */
 main {
   display: flex;
@@ -56,7 +56,9 @@ footer {
 
 /* 
 What does the justify-content property do? 
-TODO: Write your answer here 
+TODO: Manages the space on the horizontal axis unless we change the flex direction.Flex to control how flex items are aligned along the main axis (horizontally) within a flex container. It affects the distribution of space between and around the flex items.
+
+
 */
 .products {
   flex: 4;
@@ -70,7 +72,7 @@ TODO: Write your answer here
 /* 
 What is the flex property a shorthand property for?
 What is it doing here? 
-TODO: Write your answer here 
+TODO: flext grow, flex-shrink, and then flex bases. growing base on the given values. 
 */
 .card {
   border-style: solid;
@@ -95,7 +97,7 @@ TODO: Write your answer here
 /* 
 What does the flex-direction property define?
 What is it doing here? 
-TODO: Write your answer here 
+TODO: default is row, flex direction allows us to change the direction to vertical as well (colum). 
 */
 @media screen and (max-width: 768px) {
   main,

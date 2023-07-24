@@ -85,7 +85,7 @@ button {
   cursor: pointer;
 }
 
-/* What does this CSS rule do? */
+/* Modifies the aperance of the select, for different browsers */
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -112,7 +112,7 @@ select:hover, button:hover {
   box-shadow: 0 0 5px #999;
 }
 
-/* What does this pseudo-class mean? */
+/* you can focus on something, when you are able to tab into something */
 .text-input:focus {
   border-right-width: 5px;
 }
@@ -136,13 +136,13 @@ select:hover, button:hover {
   margin-right: 2%;
 }
 
-/* What does this selector do? */
+/* If a checkbox is check find the label next to the checkbox */
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
-/* What does this selector do? */
+/* */
 .checkbox:checked + label::after {
   margin-left: 10px;
   font-size: 90%;

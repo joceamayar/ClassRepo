@@ -1,6 +1,6 @@
 var hungerLevel = 50;
 var isLunchTime = true;
-var lunchBill = 11;
+var lunchBill = 15;
 
 // If statement
 // Evaluates to true so "Hungry" is logged
@@ -11,7 +11,7 @@ if (hungerLevel >= 50) {
 
 // Evaluates to false so nothing is logged
 if (hungerLevel < 50) {
-  console.log("Hungry!");
+  console.log("not Hungry!");
 }
 
 // Else statement 

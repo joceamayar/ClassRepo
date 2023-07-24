@@ -10,12 +10,15 @@ console.log(a * b);
 
 // Modulus returns the remainder between two numbers.  
 console.log(a % b);
+10%2
+105%10
+//remainder
 
 // Comparison operators combine with strings, booleans and numbers to form an expression that evaluates to true or false
 // Compares equality
-
-console.log(b == c);
-console.log(b != c);
+//avoid using these:
+// console.log(b == c);
+// console.log(b != c);
 
 // Compares equality and type (strict equality)
 console.log(b === c);
@@ -48,3 +51,6 @@ console.log(expression2);
 
 // Returns false
 console.log(!expression2);
+
+
+let hadlunch = true 

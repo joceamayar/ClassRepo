@@ -1,9 +1,10 @@
 // Declares student variable using var keyword 
-var studentName;
+let studentName;
+
 
 // Uses assignment operator(=) to assign a value
-var studentName = "Abdul";
-var studentAge = 32;
+ studentName = "Jocelin";
+let studentAge = 32;
 
 // To re-assign a variable, use only the variable's name  
 studentName = "Tonya";
@@ -17,4 +18,5 @@ console.log(studentName);
 console.log("My name is ");
 
 // Logs "My name is Tonya"
-console.log("My name is " + studentName);
+// console.log("My name is " + studentName + "I am " +studentAge+"years old" );
+console.log('my name is ${studentName}. I am ${studentAge} years old.')

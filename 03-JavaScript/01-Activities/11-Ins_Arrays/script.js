@@ -10,7 +10,7 @@ var names = ["Andre", "Karl", "Rashida", "Olivia"];
 console.log(names);
 
 // To log a single element, we use the name of the array with the index in brackets
-console.log(names[1]); 
+console.log(names[0]); 
 
 // Arrays are zero-indexed, so the index of first element in the array is 0
 console.log(names[0]); 

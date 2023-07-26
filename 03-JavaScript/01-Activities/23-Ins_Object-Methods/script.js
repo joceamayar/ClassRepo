@@ -12,7 +12,7 @@ var planet = {
     console.log("The earth is the only planet in our solar system not named after a Roman god or goddess.");
   },
   showWarning: function () {
-    console.log("Space junk falls into Earth's atmosphere at a rate of about one a day.");
+    console.warn("Space junk falls into Earth's atmosphere at a rate of about one a day.");
   }
 };
 

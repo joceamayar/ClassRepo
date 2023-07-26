@@ -5,6 +5,7 @@ var myString = "Hello String";
 
 //Array Methods
 // Sorts comparisonOperators array and returns the sorted array
+// sorsts by alphabetical order, it replacers with a new string 
 comparisonOperators.sort(); 
 
 //Logs sorted array

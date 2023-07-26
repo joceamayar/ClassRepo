@@ -7,10 +7,17 @@ var planet = {
   isPopulated: true,
   population: "7.594 billion"
 };
-
+}
 // To access a property's value that is a string, number or boolean, use the object's name and the associated key	
 // Uses dot notation and logs "Earth"	
 console.log(planet.name);
 	
 // Uses bracket notation and logs "Earth"
 console.log(planet["name"]);
+
+let door -{
+    material: "wood",
+    color: "white",
+    dimensions:{height:"5 ft",width: "2ft"},
+    isOpen:true
+}

@@ -16,3 +16,8 @@ console.log(firstChildUl)
 
 // Setting style of element
 firstChildUl.style.color = "green";
+
+document.body 
+document.body.children[1]
+document.body.children[1].children[0].style = "backgrown"
+

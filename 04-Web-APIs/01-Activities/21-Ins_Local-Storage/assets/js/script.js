@@ -2,7 +2,8 @@ var counter = document.querySelector("#counter");
 var addButton = document.querySelector("#add");
 var subtractButton = document.querySelector("#subtract");
 
-var count = localStorage.getItem("count");
+// is local storage is null then start at 0 
+var count = localStorage.getItem("count") || 0 ;
 
 counter.textContent = count;
 

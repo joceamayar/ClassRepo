@@ -4,7 +4,7 @@ var todoList = document.querySelector("#todo-list");
 var todoCountSpan = document.querySelector("#todo-count");
 
 var todos = [];
-
+//renders todps if they exist
 // TODO: What is the purpose of this function?
 function renderTodos() {
   // TODO: Describe the functionality of the following two lines of code.
@@ -12,6 +12,8 @@ function renderTodos() {
   todoCountSpan.textContent = todos.length;
   
   // TODO: Describe the functionality of the following `for` loop.
+//
+  // for each string in our array buit an lo, giverit a data-index and adding a button 
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
 
@@ -61,12 +63,16 @@ todoForm.addEventListener("submit", function(event) {
 });
 
 // TODO: Describe the purpose of the following line of code.
+//they are hooking at a containor, on the whole ul or ol 
 todoList.addEventListener("click", function(event) {
   var element = event.target;
   // TODO: Describe the functionality of the following `if` statement.
+  //removes ites that was click on, we're using event delegation
   if (element.matches("button") === true) {
     var index = element.parentElement.getAttribute("data-index");
     todos.splice(index, 1);
+    //any time we modify the variable 
+    //splices removes at the idex and i want to remove  1 element 
     // TODO: What will happen when the following functions are called?
     storeTodos();
     renderTodos();
@@ -74,3 +80,5 @@ todoList.addEventListener("click", function(event) {
 });
 
 init();
+
+//managing the high score on the page

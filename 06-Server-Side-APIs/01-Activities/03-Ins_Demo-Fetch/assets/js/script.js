@@ -5,6 +5,15 @@ function getApi() {
   // fetch request gets a list of all the repos for the node.js organization
   var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
 
+
+  //fetch is returning a promise, if something retur a promise you can change a .net object. the value that stpres a promise is
+  //promises are when we need something asynchronous programing (a text messege)
+  // I want an event to occur and when somethign response do x 
+
+  // synchronise (eg. phone call) is expected that the next things that is said is imetialy say  
+  
+
+  //Read as I want data, when that data comes back run the rest of the program. 
   fetch(requestUrl)
     .then(function (response) {
       return response.json();

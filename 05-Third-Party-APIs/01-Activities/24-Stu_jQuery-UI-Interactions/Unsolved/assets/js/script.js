@@ -64,5 +64,7 @@ $(function () {
   });
 });
 
+$( "#skills-list" ).sortable();
+
 // Add interaction here
 //

@@ -5,6 +5,47 @@
   --lightteal: #d5f5f5;
   --light: #fffaf7;
 }
-
+body {
+  font-family: font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+}
 /* Add your custom class style definitions here */
 /* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */
+
+.custom-navbar {
+  background-color: var(--teal);
+}
+
+.custom-navbar a {
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+.custom-navbar a:hover {
+  color: var(--lightteal);
+}
+
+.hero {
+  background-color: var(--lightteal);
+  color: var(--darkblue);
+}
+
+.custom-btn {
+  background-color: var(--brown);
+  color: var(--blue);
+}
+
+.custom-btn:hover {
+  background-color: var(--darkblue);
+  color: var(--light);
+}
+
+.custom-card{
+
+}
+
+.custom-card-header{
+background-color: white;
+background-color: ;
+
+}

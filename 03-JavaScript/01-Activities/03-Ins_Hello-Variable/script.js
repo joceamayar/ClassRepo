@@ -1,6 +1,8 @@
-// Declares student variable using var keyword 
-let studentName;
+// Declares student variable using let keyword 
+//let - lets us know when we have mistakes 
+//This variable is currently undefine 
 
+let studentName;
 
 // Uses assignment operator(=) to assign a value
  studentName = "Jocelin";
@@ -19,4 +21,11 @@ console.log("My name is ");
 
 // Logs "My name is Tonya"
 // console.log("My name is " + studentName + "I am " +studentAge+"years old" );
-console.log('my name is ${studentName}. I am ${studentAge} years old.')
+
+cpnsole.log("my name is " + studentName + ".I am" + studentAge + "years old!");
+
+// Or 
+
+console.log(`my name is ${studentName}. I am ${studentAge} years old.`)
+
+

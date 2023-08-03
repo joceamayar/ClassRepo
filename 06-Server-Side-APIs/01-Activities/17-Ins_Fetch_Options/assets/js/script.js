@@ -9,3 +9,12 @@ fetch('https://api.github.com/repos/nodejs/node/issues?per_page=5', {
   .then(function (data) {
     console.log(data);
   });
+
+
+
+// It is common for an api to pass the options object 
+
+  // git retrive -retrives 
+  // git post- creates
+  // git 
+  // git delete - deletes  

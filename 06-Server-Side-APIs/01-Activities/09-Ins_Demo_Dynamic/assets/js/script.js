@@ -6,6 +6,7 @@ function getApi() {
 
   fetch(requestUrl)
     .then(function (response) {
+      // return response.text(); in the rare occassion that this is not on string  form 
       return response.json();
     })
     .then(function (data) {

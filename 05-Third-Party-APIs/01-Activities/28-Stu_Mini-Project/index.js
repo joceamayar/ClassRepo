@@ -9,7 +9,7 @@ setInterval(function(){
 }, 1000)
 
 
-let inputEl= document. querySelector('#name,#type,#date');
+let inputEl= document. querySelector(['#name,#type,#date']);
 let submitBtnEl = document.querySelector("#submit-button");
 let storedInputArr = []
 

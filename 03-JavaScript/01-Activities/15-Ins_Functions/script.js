@@ -1,5 +1,12 @@
 // Functions are reusable blocks of code that perform a specific task
+
+
 // This is a function declaration 
+//You declare a fuction, by giving givign it a name just like when we declare a variable
+//A funtion willk have and input, something to execute and a return 
+//Funtion declariations are hoisted,  meaning that we can put this fuction declaration at the bottom of out code, before even defining it. 
+
+declareHello(); // can be use before defining the functin 
 function declareHello() { 
   console.log("Hello, I am a function declaration.");
   console.log("-----------------------------------");
@@ -8,11 +15,15 @@ function declareHello() {
 }
 
 // This is a function expression
-var expressHello = function() { 
+//In an expression function you declare the variable to a funtion 
+//This type of functions can only be use after being define.
+let expressHello = function() { 
   console.log("Hello, I am a function expression.");
   console.log("-----------------------------------");
   return;
 };
+
+expressHello(); //can only beuse after have been defined 
 
 // Functions must be called to execute
 declareHello(); 
@@ -32,3 +43,32 @@ function declareHelloAgain(x,y,z) {
 // Function arguments give parameters their values
 // Here the parameter x is given the value 7 when the function is called
 declareHelloAgain(7, "Hello", true);
+
+
+
+//We can pass text from variables such as a for loop 
+
+for (let i = 0; i <10; i++) {
+  declareText("Hello, I'm a fuction declaration. I was called " + i + " times")
+  
+}
+
+
+function declareText(text){
+  console.log(text);
+  console.log("-----------------------------------");
+
+  return;
+}
+
+
+//Other examples:
+
+add()
+add (5,5)
+
+
+function add(num1, num2){
+
+  console.log(num1 + num2)
+}

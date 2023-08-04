@@ -8,10 +8,13 @@ for (var i = 0; i < zooAnimals.length; i++) {
      console.log("I am going to zoo to see " + zooAnimals[i] + ".");
 }
 
-for (let index = 0; index < array.length; index++) {
-    console.log(zooAnimals[i])
-    
+
+var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats"];
+for (var i = 0; i < zooAnimals.length; i--) { 
+     console.log("I am going to zoo to see " + zooAnimals[i] + ".");
 }
+
+
 
 // // For-loops are often used to iterate over arrays
 // var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats"];

@@ -4,6 +4,7 @@ var limitWarningEl = document.querySelector('#limit-warning');
 
 var getRepoName = function () {
   // Where is this value coming from?
+  //hooking into the url, grabbing everythign after the ? mark
   // TODO: Write your answer here
   var queryString = document.location.search;
   var repoName = queryString.split('=')[1];
@@ -46,6 +47,8 @@ var displayIssues = function (issues) {
     issueContainerEl.textContent = 'This repo has no open issues!';
     return;
   }
+
+console.log(issues);
 
   for (var i = 0; i < issues.length; i++) {
     var issueEl = document.createElement('a');

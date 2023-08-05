@@ -29,15 +29,20 @@ var buttonClickHandler = function (event) {
   }
 };
 
+
+
+
 var getUserRepos = function (user) {
   var apiUrl = 'https://api.github.com/users/' + user + '/repos';
 
   fetch(apiUrl)
-    .then(function (response) {
+    .then(function (response) { //.then the response opject comes bac
       if (response.ok) {
-        response.json().then(function (data) {
+        response.json().then(function (data) { //our data comes in as a ast
           displayRepos(data, user);
         });
+
+
       } else {
         alert('Error: ' + response.statusText);
       }

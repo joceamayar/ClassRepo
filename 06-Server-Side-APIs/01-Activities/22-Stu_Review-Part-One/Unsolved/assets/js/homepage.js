@@ -1,13 +1,13 @@
-var userFormEl = document.querySelector('#user-form');
-var languageButtonsEl = document.querySelector('#language-buttons');
-var nameInputEl = document.querySelector('#username');
-var repoContainerEl = document.querySelector('#repos-container');
-var repoSearchTerm = document.querySelector('#repo-search-term');
+let userFormEl = document.querySelector('#user-form');
+let languageButtonsEl = document.querySelector('#language-buttons');
+let nameInputEl = document.querySelector('#username');
+let repoContainerEl = document.querySelector('#repos-container');
+let repoSearchTerm = document.querySelector('#repo-search-term');
 
-var formSubmitHandler = function (event) {
+let formSubmitHandler = function (event) {
   event.preventDefault();
 
-  var username = nameInputEl.value.trim();
+  let username = nameInputEl.value.trim();
 
   if (username) {
     getUserRepos(username);
@@ -19,22 +19,24 @@ var formSubmitHandler = function (event) {
   }
 };
 
-var buttonClickHandler = function (event) {
+let buttonClickHandler = function (event) { //handles the buttonk that calls the event 
   // What is `event.target` referencing?
   // TODO: Write your answer here
-  var language = event.target.getAttribute('data-language');
+  let language = event.target.getAttribute('data-language'); //
 
   // Why is this `if` block in place?
   // TODO: Write your answer here
-  if (language) {
+
+  //the if statement is calling this fuction 
+  if (language) { //if languge is not unefine 
     getFeaturedRepos(language);
 
     repoContainerEl.textContent = '';
   }
 };
 
-var getUserRepos = function (user) {
-  var apiUrl = 'https://api.github.com/users/' + user + '/repos';
+let getUserRepos = function (user) {
+  let apiUrl = 'https://api.github.com/users/' + user + '/repos';
 
   fetch(apiUrl)
     .then(function (response) {
@@ -53,10 +55,11 @@ var getUserRepos = function (user) {
     });
 };
 
-var getFeaturedRepos = function (language) {
+let getFeaturedRepos = function (language) {
   // What are the query parameters doing here?
   // TODO: Write your answer here
-  var apiUrl = 'https://api.github.com/search/repositories?q=' + language + '+is:featured&sort=help-wanted-issues';
+  //sorting by help wanted issues
+  let apiUrl = 'https://api.github.com/search/repositories?q=' + language + '+is:featured&sort=help-wanted-issues';
 
   fetch(apiUrl).then(function (response) {
     if (response.ok) {
@@ -69,30 +72,32 @@ var getFeaturedRepos = function (language) {
   });
 };
 
-var displayRepos = function (repos, searchTerm) {
+let displayRepos = function (repos, searchTerm) {
   if (repos.length === 0) {
     repoContainerEl.textContent = 'No repositories found.';
     // What would happen if there was no `return;` here?
+
+    
     // TODO: Write your answer here
     return;
   }
 
   repoSearchTerm.textContent = searchTerm;
 
-  for (var i = 0; i < repos.length; i++) {
+  for (let i = 0; i < repos.length; i++) {
     // What is the result of this string concatenation?
     // TODO: Write your answer here
-    var repoName = repos[i].owner.login + '/' + repos[i].name;
+    let repoName = repos[i].owner.login + '/' + repos[i].name;
 
-    var repoEl = document.createElement('div');
+    let repoEl = document.createElement('div');
     repoEl.classList = 'list-item flex-row justify-space-between align-center';
 
-    var titleEl = document.createElement('span');
+    let titleEl = document.createElement('span');
     titleEl.textContent = repoName;
 
     repoEl.appendChild(titleEl);
 
-    var statusEl = document.createElement('span');
+    let statusEl = document.createElement('span');
     statusEl.classList = 'flex-row align-center';
 
     if (repos[i].open_issues_count > 0) {

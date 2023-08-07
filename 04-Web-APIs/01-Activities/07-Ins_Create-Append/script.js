@@ -1,33 +1,63 @@
-// // Stores user response in variable
-// var tagName = prompt("Please enter an HTML Tag (ex. h1, h2, p, div):", "enter tag");
 
-// if (tagName !== "h1" && tagName !== "h2" && tagName !== "p" && tagName !== "div") {
-//   alert("please enter a valid tag");
-// } else {
-  // Creates element based on tag entered by user. Create the element 
+//Creating a dinamic element: (3 Important components: create the element, set the textContent, Append the child)
 
-let students =["Christian", "Simon"]
+//1. Create the element 
+let tag = document.createElement ("h1")
 
-for (let i = 0; i < students.length; i++) {
+//2. Set the text content 
 
-  var tag = document.createElement("p");
+tag.textContent = "example text"
 
-  // Adds text content to created tag. 
-  tag.textContent = students[i];
+//3. Append
+
+document.body.appendChild(tag);
+//-----------------------------------------------------
+
+//Creates element basen on tag enter by user 
+
+let tag = document.createElement("p")
+
+//Adds text content to create the tag
+tag.textContent = "exaple text 1"
+
+//Appends tag as a child of document body 
+
+document.body.appendChild(tag);
+//-----------------------------------------------------
+
+// we can also run it in a loop! 
+
+ for (let i = 0; i < 20; i++) {
   
-  // Appends tag as child of document body, add to the end of the body
-  document.body.appendChild(tag);
-}
+  //Creates element basen on tag enter by user 
 
-// var nextTag = confirm("Would you like to add another tag?");
+let tag = document.createElement("p")
 
-// if (nextTag === true) {
-//   var secondTagName = prompt("Please enter another  HTML Tag (ex. h1, h2, p, div):", "enter tag here");
-//   if(secondTagName !== "h1" && secondTagName !== "h2" && secondTagName !== "p" && secondTagName !== "div") {
-//     alert("please enter a valid tag");
-//   } else {
-//     var secondTag = document.createElement(secondTagName);
-//     secondTag.textContent = "This is our second tag via prompts, it's a " + secondTagName + ".";
-//     document.body.appendChild(secondTag);
-//   }
-// }
+//Adds text content to create the tag
+tag.textContent = "exaple text " + i;
+
+//Appends tag as a child of document body 
+
+document.body.appendChild(tag);
+  
+ }
+//-----------------------------------------------------
+
+//And add an Array 
+
+let petNames = ["Finn", "Guajillo", "Gari", "Pancho"]
+
+for (let i = 0; i < petNames.length; i++) {
+  
+  //Creates element basen on tag enter by user 
+
+let tag = document.createElement("p")
+
+//Adds text content to create the tag
+tag.textContent = petNames[i];
+
+//Appends tag as a child of document body 
+
+document.body.appendChild(tag);
+  
+ }

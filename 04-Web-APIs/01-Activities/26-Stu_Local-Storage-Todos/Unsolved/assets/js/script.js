@@ -1,27 +1,32 @@
-var todoInput = document.querySelector("#todo-text");
-var todoForm = document.querySelector("#todo-form");
-var todoList = document.querySelector("#todo-list");
-var todoCountSpan = document.querySelector("#todo-count");
+let todoInput = document.querySelector("#todo-text");
+let todoForm = document.querySelector("#todo-form");
+let todoList = document.querySelector("#todo-list");
+let todoCountSpan = document.querySelector("#todo-count");
 
-var todos = [];
-//renders todps if they exist
+//Instead of having the funtion init (). we can modified the variable todos:
+let todos = JSON.parse(localStorage.getItem("todos")) ||[] ;
+// init();
+renderTodos();
 // TODO: What is the purpose of this function?
+//renders todos if they exist, it displays the specified Html code iside the specified Html element
+
 function renderTodos() {
-  // TODO: Describe the functionality of the following two lines of code.
-  todoList.innerHTML = "";
+  // TODO: Describe the functionality of the following two lines of code.0
+  //this fuction is preventing duplicates from being rendered by clearing the list and re-rendering.
+  todoList.innerHTML = ""; // this is preventing us from getting duplicates 
   todoCountSpan.textContent = todos.length;
   
   // TODO: Describe the functionality of the following `for` loop.
 //
-  // for each string in our array buit an lo, giverit a data-index and adding a button 
-  for (var i = 0; i < todos.length; i++) {
-    var todo = todos[i];
+  // for each string in our array buit an li, giverit a data-index and adding a button 
+  for (let i = 0; i < todos.length; i++) {
+    let todo = todos[i];
 
-    var li = document.createElement("li");
+    let li = document.createElement("li");
     li.textContent = todo;
     li.setAttribute("data-index", i);
 
-    var button = document.createElement("button");
+    let button = document.createElement("button");
     button.textContent = "Complete ✔️";
 
     li.appendChild(button);
@@ -30,25 +35,30 @@ function renderTodos() {
 }
 
 // TODO: What is the purpose of the following function?
-function init() {
-  // TODO: What is the purpose of the following line of code?
-  var storedTodos = JSON.parse(localStorage.getItem("todos"));
-  // TODO: Describe the functionality of the following `if` statement.
-  if (storedTodos !== null) {
-    todos = storedTodos;
-  }
-  // TODO: Describe the purpose of the following line of code.
-  renderTodos();
-}
+//Sets todos array to be an empty array if nothing is in local storage, but if there is something stored in local storage , we need to perse the array using JASON.parse to parse the array objects back into an array from a string 
+// function init() {
+//   // TODO: What is the purpose of the following line of code?
+//   let storedTodos = JSON.parse(localStorage.getItem("todos"));
+//   // TODO: Describe the functionality of the following `if` statement.
+//   if (storedTodos !== null) {
+//     todos = storedTodos;
+//   }
+//   // TODO: Describe the purpose of the following line of code.
+//   renderTodos();
+// }
+
 
 function storeTodos() {
   // TODO: Describe the purpose of the following line of code.
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
 // TODO: Describe the purpose of the following line of code.
+
+//Allows addign to the todo list, we're usign the submit event that only exist on forms 
 todoForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  var todoText = todoInput.value.trim();
+  let todoText = todoInput.value.trim();
   // TODO: Describe the functionality of the following `if` statement.
   if (todoText === "") {
     return;
@@ -63,22 +73,22 @@ todoForm.addEventListener("submit", function(event) {
 });
 
 // TODO: Describe the purpose of the following line of code.
+//Removes items from the todolist 
 //they are hooking at a containor, on the whole ul or ol 
 todoList.addEventListener("click", function(event) {
-  var element = event.target;
+  let element = event.target;
   // TODO: Describe the functionality of the following `if` statement.
-  //removes ites that was click on, we're using event delegation
+  //removes items that was click on, we're using event delegation
   if (element.matches("button") === true) {
-    var index = element.parentElement.getAttribute("data-index");
+    let index = element.parentElement.getAttribute("data-index");
     todos.splice(index, 1);
-    //any time we modify the variable 
-    //splices removes at the idex and i want to remove  1 element 
     // TODO: What will happen when the following functions are called?
+    //any time we modify the variable, we're trying to persist, by saving into local storage and rerender
     storeTodos();
     renderTodos();
   }
 });
 
-init();
+
 
 //managing the high score on the page

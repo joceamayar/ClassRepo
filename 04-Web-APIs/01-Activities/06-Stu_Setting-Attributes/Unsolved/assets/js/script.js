@@ -18,15 +18,31 @@ site3El.children[0].textContent = "Site 3";
 site3El.children[1].setAttribute("href", "https://instagram.com");
 site3El.children[1].children[0].setAttribute("src", "assets/images/image_3.jpg");
 site3El.children[1].children[0].setAttribute("alt", "women working");
-site3El.children[1].children[0].setAttribute("style", "padding:10px;");
+site3El.hildren[1].children[0]c.setAttribute("style", "padding:10px;");
 
 // Write Your Code Below
 
-let allh4 = document.querySelectorAll("h4")
-console.log (allh4);
+//Review 
 
+let allh4 = document.querySelectorAll("h4")
 for (let i = 0; i < allh4.length; i++) {
-    allh4[i].setAttribute("style", "color:blue; font-size:30px; font-weight:bold, padding-left:10px,margin:0")
-    
+    allh4[i].setAttribute("style", "color:blue; font-size: 30px; font-weight: bold; paddign-left; margin: 0;"); 
 }
+
+favoriteEl.children[0].setAttribute("style", "color:pink; font-weight:bold; backgroundColor: black;")
+
+
+
+
+
+
+
+
+// let allh4 = document.querySelectorAll("h4")
+// console.log (allh4);
+
+// for (let i = 0; i < allh4.length; i++) {
+//     allh4[i].setAttribute("style", "color:blue; font-size:30px; font-weight:bold, padding-left:10px,margin:0")
+    
+// }
 

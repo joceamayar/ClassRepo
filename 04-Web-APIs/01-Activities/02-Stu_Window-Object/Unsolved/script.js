@@ -1,30 +1,34 @@
 // TODO: What will the following line of code log?
-//prints out the window, which is the current tab
+//prints out the window object, which represents a window cotaining a DOM document.
+
 console.log(window);
 
 // TODO: What will the following line of code log?
-//
+//logs the id document whic is connected to the html file. It prints the whole document. In this example the html document will be the parent element and everything inside will be the children. 
 console.log(window.document);
 
 // TODO: What will the following line of code log?
-// It prints out the whole html document
+// It prints out the elements inside the html file 
 console.log(document.documentElement);
 
 // TODO: What will the following line of code log?
-//Prints out the head 
+//It logs into the document and grads the head tag, allowing it to show only the headtag inside the html file. 
 console.log(document.head);
 
 
-//Web APIs - a way to interact with the bropwser
+//Class Notes 
 
-//the browser 
-//window.location.href= newsgoogle.com
+// Web API's (Aplication Programing Interface)
+//Its a set of methods, properties, event, and URLs that developer use to interact with componets of a user's web browser.
 
-//the web browser, geo location is hucking inot a feature that is part of the browser model, every feature in the browser 
 
-//Browsers 
+//The Web browser
+//the browser Object Model 
+//Lets us change the location focusing in the browsers features
+//Every feature in the browser has its own APT ("control-remote")
 
-//An API and application Programing 
-//web api use java scrip
-//DOM 
 
+// The DOM - (Document Obejct Model)
+//Its an API tha we interact with to change whats in the screen.
+//-It only hucks ionto the current window
+// - It's a tree of parent child relationships, manipulating the element in the webpage traversign a tree structuore.

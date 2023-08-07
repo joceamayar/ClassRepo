@@ -1,4 +1,7 @@
 // Access multiple elements using .querySelectorAll()
+//queryselector - Returns an object - and it return the first value 
+//querySelectorAll - Returns an Array - returns all element within the array
+
  var divTags = document.querySelectorAll("div");
  var pTags = document.querySelectorAll("p");
  var imgEl = document.querySelectorAll("img");

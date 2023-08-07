@@ -12,7 +12,7 @@ function calculateTotal(total, tipAmount) {
 }
 
 function addTip(event) {
-  event.preventDefault();
+  event.preventDefault();//Prevents the form element from sending data to the server. 
   var tipPercentage = tipEl.value * .01;
   var total = totalEl.value;
   var tipAmount = calculateTip(total, tipPercentage);
@@ -22,3 +22,9 @@ function addTip(event) {
 }
 
 submitEl.addEventListener("click", addTip);
+
+
+
+
+//the ? mark is the start of parameters
+

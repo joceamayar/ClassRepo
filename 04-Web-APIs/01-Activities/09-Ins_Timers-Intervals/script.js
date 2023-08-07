@@ -16,14 +16,14 @@ function setTime() {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
       // Calls function to create and append image
-      sendMessage();
+      displayExplosionImage();
     }
 
   }, 1000);
 }
 
 // Function to create and append colorsplosion image
-function sendMessage() {
+function displayExplosionImage() {
   timeEl.textContent = " ";
   var imgEl = document.createElement("img");
   imgEl.setAttribute("src", "images/image_1.jpg");
@@ -32,3 +32,11 @@ function sendMessage() {
 }
 
 setTime();
+
+
+
+// // calls a funtion evey second 
+// setInterval(fucntion()){
+
+
+// }, 1000)

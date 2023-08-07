@@ -20,7 +20,7 @@ function renderLastGrade() {
   // Use JSON.parse() to convert text to JavaScript object
   var lastGrade = JSON.parse(localStorage.getItem('studentGrade'));
   // Check if data is returned, if not exit out of the function
-  if (lastGrade !== null) {
+  if (lastGrade !== null) { // to make sure is an opject and not empty, because we do not want to set values in an empty 
     document.getElementById('saved-name').innerHTML = lastGrade.student;
     document.getElementById('saved-grade').innerHTML = lastGrade.grade;
     document.getElementById('saved-comment').innerHTML = lastGrade.comment;
@@ -34,7 +34,7 @@ function init() {
 }
 saveButton.addEventListener('click', function (event) {
   
-  event.preventDefault();
+  event.preventDefault(); //prevents the page from refreshing, preventing the form from getting submitted oit the server. 
   saveLastGrade();
   renderLastGrade();
 });

@@ -22,3 +22,13 @@ subtractButton.addEventListener("click", function() {
     localStorage.setItem("count", count);
   }
 });
+
+
+//Local storage, everything that we need to save needs to be in loccal storage and everything that we get we also get it as a string 
+
+//Local storage - helps data to persist 
+
+//If the user clears they history and the data set on local storage 
+
+// great for short and front-end storage, and is save in your browser history 
+

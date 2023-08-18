@@ -12,3 +12,7 @@ inquirer
   .then((user) => console.log(user))
   // Promises execution will rout to the '.catch()' callback when an error occurs in any of the promises from before.
   .catch((err) => console.log(err));
+
+
+  // is we fail to catch an error we can end our program 
+  //

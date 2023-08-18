@@ -1,12 +1,12 @@
 // Constructor class can be used to create objects containing properties "name", "age", "breed", and the "nap()" function
-class Cat {
+class Cat { // the same as a constructure function 
   constructor(name, age, breed) {
     this.name = name;
     this.age = age;
     this.breed = breed;
   }
 
-  nap() {
+  nap() {// we can just say the method funtion without having to add the function na,e
     console.log('Zzzzzzzzz');
   }
 }

@@ -19,3 +19,13 @@ readFile('./data/post.json', 'utf-8')
   .then(() => {
     console.log('Created post.html');
   });
+  .catch(err =>{ 
+    
+    console.log(err)
+  
+  });
+
+
+  //promises are made for asynchronese code, meaning that there is a wating period 
+  //resolve - in the case of success 
+  //reject - we pass over reject 

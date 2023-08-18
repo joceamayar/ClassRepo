@@ -12,6 +12,7 @@ const evenNumbers = originalArray.filter(function(data) {
 console.log(evenNumbers);
 console.log(originalArray);
 
+
 const isPrime = num => {
   // Set up a loop the starts with 2 and continues to increment i as long as i is less than 2
   for (let i = 2; i < num; i++) {
@@ -22,11 +23,12 @@ const isPrime = num => {
   return num !== 1;
 };
 
-
 // TODO: Describe how filter is working in this example. What will the value of primeArray be? 
+//This is filtering all the vslues in the originalArray and filter them with the prime funtion returning only the values in the array that are divisible by 2. 
 const primeArray = originalArray.filter(isPrime);
 
 
 // TODO: Describe how filter is working in this example. What will the value of moreThan5Array be? 
+//this is funtioanls loop is getting all the values in the originalArray and filtering them by the number in the array that are grater than 5 
 const moreThan5Array = originalArray.filter(num => num > 5);
 

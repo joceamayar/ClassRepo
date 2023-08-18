@@ -6,7 +6,7 @@ function Dog(name, age, breed) {
   this.breed = breed;
 }
 
-Dog.prototype.nap = function () {
+Dog.prototype.nap = function () { //it allows us to add methods after we have declare the constructure
   console.log('Zzzzzzzzz');
 };
 
@@ -15,3 +15,6 @@ const dog = new Dog('Rex', 2, 'Bulldog');
 console.log(dog);
 
 dog.nap();
+
+
+/*Prototype - Every object tha twe create with the new word allows us to add methods after the fact.  */

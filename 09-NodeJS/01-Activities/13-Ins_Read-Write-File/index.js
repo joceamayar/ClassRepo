@@ -1,5 +1,5 @@
 // fs is a Node standard library package for reading and writing files
-const fs = require('fs');
+const fs = require('fs'); // this line is impoirting alibrary so we can work with the file system (fs). Workign with an API that was created in a file folder.
 
 // Return the contents of 'data.csv' as a string in the variable "data"
 // "utf8" encodes the raw buffer data in human-readable format
@@ -7,8 +7,12 @@ fs.readFile('data.csv', 'utf8', (error, data) =>
   error ? console.error(error) : console.log(data)
 );
 
+//readFile allow to 
+
 // Uncomment this next function to write to the file with anything you pass in as process.argv[2]
 
 // fs.writeFile('log.txt', process.argv[2], (err) =>
 //   err ? console.error(err) : console.log('Success!')
 // );
+
+//Node has synchrones and asynchrones functions for most of their files

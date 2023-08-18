@@ -37,3 +37,8 @@ const cat = new Cat('Tom', 2, 'Shorthair', ['Garfield', 'Felix', 'Salem']);
 
 console.log(dog.getLives());
 console.log(cat.getLives());
+
+
+//Polymorphism, can give the same method name 
+
+//Interface is the objecs and methods that we are providing 

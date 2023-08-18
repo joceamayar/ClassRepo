@@ -1,8 +1,10 @@
-// 1. Object
+1. Object
 const nodejs = {
   name: 'Node.js',
   type: 'JavaScript runtime environment',
 };
+
+const {name,type} = nodejs;
 
 // TODO: Destructure the object 'nodejs'
 
@@ -26,10 +28,20 @@ const js = {
   },
 };
 
+
+
+
+
+
 // TODO: Destructure the nested object 'js'
 
 console.log(framework1); // <= AngularJS
 console.log(framework2); // <= Vue.js
+
+
+
+
+
 
 // 3. Arrays
 const languages = ['HTML', 'CSS', 'JavaScript'];

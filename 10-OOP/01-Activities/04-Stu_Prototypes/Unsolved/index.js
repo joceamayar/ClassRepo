@@ -1,4 +1,5 @@
 // TODO: Add a comment describing what kind of function this is
+//Constructure funtion 
 function BlogPost(authorName, title, text, createdOn) {
   this.authorName = authorName;
   this.title = title;
@@ -11,6 +12,7 @@ function BlogPost(authorName, title, text, createdOn) {
 }
 
 // TODO: Add a comment describing the purpose of `.prototype` in this method declaration
+// Prototype function
 BlogPost.prototype.addComent = function(comment) {
   this.comments.push(comment);
 };
@@ -25,4 +27,6 @@ const post = new BlogPost(
 post.addComent('Nice post, I like it!');
 
 // TODO: Add a comment describing what you expect to see printed in the console
+//'Nice post, I like it!'
+
 console.log(post.comments);

@@ -1,35 +1,26 @@
-// function 'wait()' is scaled to return a new promise
-
 const fs = require("fs")
 
+//Change to asyncReadFile
 function asyncWriteFile() {
+ 
+    return new Promise((resolve, reject) => {
 
+        //Change read from file helloWorld.txt
+        //change to readfile
 
-  
-  
-  
-  //TODO: return the promise!!!
-  
-  //TODO: (OPTIONAL) try passing an empty string file name to make the catch fire off
-   new Promise((resolve, reject) => {
-    fs.writeFile("helloWorld.txt", "hello world!!!", function (err) {
-
- //TODO:  reject if there is an error
-
-
- //TODO: resolve if there's no error
-
-
-
-
+        fs.("", "utf8", function (err,data) {
+            if (err) {
+              reject(err)
+            }
+            else {
+        //send the data to the .then
+                resolve()
+            }
+        })
     })
-  })
 };
 
-
+//TODO:console log what was read from file
 asyncWriteFile()
-
-
-//TODO: in the event of success console log success
-
-//TODO:  in the event of an error console log the error
+.then(()=> console.log("wrote successfully to file!"))
+.catch((error)=>console.log(error))

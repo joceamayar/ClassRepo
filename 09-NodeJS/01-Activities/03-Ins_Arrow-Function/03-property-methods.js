@@ -17,11 +17,6 @@ var dog = {
 };
 
 
-
-
-
-
-
 // Prints `undefined`
 dog.makeSound();
 

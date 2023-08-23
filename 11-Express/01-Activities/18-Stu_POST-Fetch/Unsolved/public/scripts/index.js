@@ -12,7 +12,7 @@ const postReview = (review) =>
       'Content-Type': 'application/json',
     },
     // TODO: Add a comment describing why one would need to convert the JSON object to a string in this instance
-    body: JSON.stringify(review),
+    body: JSON.stringify(review), 
   })
     .then((res) => res.json())
     .then((data) => {

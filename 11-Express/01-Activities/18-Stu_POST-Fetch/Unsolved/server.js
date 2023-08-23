@@ -13,18 +13,18 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) =>
+app.get('/', (req, res) => //done
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
 // GET request for reviews
-app.get('/api/reviews', (req, res) => {
+app.get('/api/reviews', (req, res) => {//done
   console.info(`GET /api/reviews`);
   res.status(200).json(reviews);
 });
 
 // GET request for a single review
-app.get('/api/reviews/:review_id', (req, res) => {
+app.get('/api/reviews/:review_id', (req, res) => {//done
   if (req.params.review_id) {
     console.info(`${req.method} request received to get a single a review`);
     const reviewId = req.params.review_id;
@@ -47,9 +47,11 @@ app.post('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to add a review`);
 
   // TODO: Add a comment describing the functionality of following line of code:
+  //Deconstructing the attributes. 
   const { product, review, username } = req.body;
 
   // TODO: Add a comment describing why we would check to see if the following properties exist before entering the code block
+  //
   if (product && review && username) {
     // Variable for the object we will save
     const newReview = {
@@ -68,10 +70,13 @@ app.post('/api/reviews', (req, res) => {
     console.log(response);
 
     // TODO: Add a comment explaining the functionality of res.json()
+    //res.jason- sends the data as the response body of the document 
+    //201- a new item has been newly created and is now usable
     res.status(201).json(response);
   } else {
     // TODO: Add a comment describing the purpose of the else statement in this POST request.
-    res.status(500).json('Error in posting review');
+    //sends an error tha something went wrong on the data 
+    res.status(400).json('Error in posting review');
   }
 });
 

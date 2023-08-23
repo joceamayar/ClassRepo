@@ -5,9 +5,8 @@ const reviews = require('./db/reviews');
 
 const app = express();
 
-// TODO: Implement middleware for the parsing of JSON data
-
-// TODO: Implement middleware for parsing of URL encoded data
+app.use(express.json());// this is important for json
+app.use(express.urlencoded({ extended: true }));// this is parsing out the data
 
 // GET request for ALL reviews
 app.get('/api/reviews', (req, res) => {
@@ -17,6 +16,8 @@ app.get('/api/reviews', (req, res) => {
   // Sending all reviews to the client
   return res.status(200).json(reviews);
 });
+
+//_____________________________________________________________________________
 
 // GET request for a single review
 app.get('/api/reviews/:review_id', (req, res) => {
@@ -35,6 +36,9 @@ app.get('/api/reviews/:review_id', (req, res) => {
     res.status(400).send('Review ID not provided');
   }
 });
+
+
+//_____________________________________________________________________________
 
 // POST request to add a review
 app.post('/api/reviews', (req, res) => {
@@ -58,6 +62,11 @@ app.post('/api/reviews', (req, res) => {
   // Log the response body to the console
   console.log(req.body);
 });
+
+
+//_____________________________________________________________________________
+
+
 
 // POST request to upvote a review
 app.post('/api/upvotes/:review_id', (req, res) => {

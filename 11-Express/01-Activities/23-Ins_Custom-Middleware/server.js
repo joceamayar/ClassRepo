@@ -25,3 +25,7 @@ app.patch('/:id', (req, res) => res.json(`PATCH route`));
 app.listen(PORT, () =>
   console.log(`Listening for requests on port ${PORT}! 🏎️`)
 );
+
+
+
+//middleware - we can do it at multiple levels! super powerfull

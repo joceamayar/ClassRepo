@@ -11,10 +11,12 @@ const sortHelper = (type) =>
   termData.sort(sortData('term', 'relevance', `${type}`));
 
 // TODO: Add a comment describing the functionality of this route
-
+//It  get the array from terms.json, the. It takes two parameters: req (short for request) and res (short for response). 
+//req represents the incoming HTTP request object, which contains information about the client's request, such as headers, query parameters, and request body.
+//res represents the HTTP response object, which is used to send a response back to the client, including data or status codes.
 app.get('/api/terms/', (req, res) => {
   // TODO: Add a comment describing the req.query object
-
+  //allows you to access the query parameters 
   const hasQuery = Object.keys(req.query).length > 0;
 
   if (hasQuery && req.query.sort === 'dsc') {
@@ -30,7 +32,7 @@ app.get('/api/terms/', (req, res) => {
 });
 
 // TODO: Add a comment describing what this route will return
-
+//filtering by term another way of expressing this will be " "
 app.get('/api/term/:term', (req, res) => {
   // TODO: Add a comment describing the content of req.params in this instance
 
@@ -74,3 +76,8 @@ app.get('/api/categories', (req, res) => {
 app.listen(PORT, () =>
   console.info(`Example app listening at http://localhost:${PORT}`)
 );
+
+
+// Set- use to add/get unique values 
+//const myNewSet = new Set();
+Array.forEach(item=> myNewSet.add(item.categories))

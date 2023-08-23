@@ -1,25 +1,25 @@
 const express = require('express');
 
-const PORT = 3001;
+const PORT = 3001; // only one program can be listening in a port
 const reviews = require('./db/reviews');
 
 const app = express();
 
 // Middleware for parsing application/json and urlencoded data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());// this is important for json
+app.use(express.urlencoded({ extended: true }));// this is parsing out the data
 
 // GET request for ALL reviews
-app.get('/api/reviews', (req, res) => {
+app.get('/api/reviews', (req, res) => { //http request - retreats
   // Log our request to the terminal
   console.info(`${req.method} request received to get reviews`);
 
   // Sending all reviews to the client
-  return res.json(reviews);
+  return res.json(reviews); //make sure we are adding this line of code
 });
 
 // POST request to add a review
-app.post('/api/reviews', (req, res) => {
+app.post('/api/reviews', (req, res) => { // creates
   // Log that a POST request was received
   console.info(`${req.method} request received to add a review`);
 
@@ -41,6 +41,26 @@ app.post('/api/reviews', (req, res) => {
   console.log(req.body);
 });
 
-app.listen(PORT, () =>
+app.listen(PORT, () =>/ // without this 
   console.log(`Express server listening on port ${PORT}!`)
 );
+
+
+//What things can we send: 
+//JSOM
+//status res.status200.json*reviews); 
+//files: res.sendFile(path.join (__dirname,"db"); when sending files we need an absolute path 
+//a string of html (<h1>hello world<h1/>)
+
+
+//Challenge
+//randomly generate an id 
+
+
+
+//insopnia
+
+// {
+// "produtc": "playstation 5",
+
+// }

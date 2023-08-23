@@ -3,10 +3,12 @@ const path = require('path');
 const fs = require('fs');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
-
+//Root 
 const PORT = 3001;
 
 const app = express();
+const reviews = require("./db/reviews.json")
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +18,9 @@ app.use(express.static('public'));
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
+
+// ________________________________________________________________________________
+
 
 // GET request for reviews
 app.get('/api/reviews', (req, res) => {
@@ -45,7 +50,10 @@ app.post('/api/reviews', (req, res) => {
     };
 
     // Convert the data to a string so we can save it
-    const reviewString = JSON.stringify(newReview);
+
+    reviews.push(newReview)
+  
+    const reviewString = JSON.stringify(reviews);
 
     // Write the string to a file
     fs.writeFile(`./db/reviews.json`, reviewString, (err) =>

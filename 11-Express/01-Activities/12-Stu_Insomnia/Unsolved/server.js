@@ -1,14 +1,33 @@
 const express = require('express');
-// TODO: Require the json file located in `/db`
+const path = require('path');
+const app = express();
+const PORT = 4000;
+const repos = require("./db/repos.json")
 
-// TODO: Create an `app` variable set to the value of `express()`
 
-app.get('/', (req, res) => {
-  res.send(
-    'Use the API endpoint at <a href="http://localhost:3001/api">localhost:3001/api</a>'
-  );
+app.use(express.static('public'));
+
+app.get('/api/db', (req, res) => {
+
+  res.json(repos); 
+
+});
+app.put('/api/db', (req, res) => {
+
+  res.send("you hit the put endpoint for api/db!"); 
+
+});
+app.delete('/api/db', (req, res) => {
+
+  res.send("you hit the delete endpoint for api/db!"); 
+
+});
+app.post('/api/db', (req, res) => {
+  
+  res.send("you hit the post endpoint for api/db!"); 
+
 });
 
-// TODO: Create a GET route for `/api` that will return the content of our json file
-
-// TODO: Have the app listen on port 3001
+app.listen(PORT, () =>
+  console.log(`Example app listening at http://localhost:${PORT}`)
+);

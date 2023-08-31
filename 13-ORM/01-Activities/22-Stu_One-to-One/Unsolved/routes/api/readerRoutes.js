@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
   try {
     const readerData = await Reader.findAll({
       // TODO: Add a comment describing the functionality of this property
+      // this is similar to a left join, include. when we want allof the data from the table on the left. 
       include: [{ model: LibraryCard }],
     });
     res.status(200).json(readerData);

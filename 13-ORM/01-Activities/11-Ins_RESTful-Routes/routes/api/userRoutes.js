@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
     res.status(200).json(userData);
   } catch (err) {
     // 400 status code means the server could not understand the request
-    res.status(400).json(err);
+    res.status(400).json(err.message);//have to ad messege because it would not send it back., this is only done during the developing process if not is not allow to be serialize
   }
 });
 

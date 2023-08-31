@@ -6,6 +6,8 @@ Driver.hasOne(License, {
   foreignKey: 'driver_id',
   // When we delete a Driver, make sure to also delete the associated License.
   onDelete: 'CASCADE',
+  or 
+  onDelete: 'SET NULL', // SET TO NULL IS THE DEFAULT FOR THIS RELATIONSHIPS  
 });
 
 // We can also define the association starting with License

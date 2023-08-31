@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const sequelize = require('./config/connection');
 
@@ -10,3 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 sequelize.sync().then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+// npmi dotenv 
+
+
+

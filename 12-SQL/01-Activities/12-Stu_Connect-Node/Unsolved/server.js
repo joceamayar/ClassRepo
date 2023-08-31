@@ -1,3 +1,5 @@
+
+
 const express = require('express');
 const mysql = require('mysql2');
 
@@ -7,7 +9,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const db = mysql.createConnection(
+const db = mysql.createConnection( 
   {
     host: 'localhost',
     user: 'root',
@@ -18,7 +20,7 @@ const db = mysql.createConnection(
 );
 
 db.query('SELECT * FROM students', function (err, results) {
-  console.log(results);
+  console.table(results);
 });
 
 app.use((req, res) => {

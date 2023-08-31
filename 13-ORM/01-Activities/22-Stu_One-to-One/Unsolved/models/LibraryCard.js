@@ -17,10 +17,12 @@ LibraryCard.init(
       defaultValue: UUIDV4,
     },
     // TODO: Add a comment describing what this column holds information for 
+    //READER ID IS A FOREGE KEY 
     reader_id: {
       type: DataTypes.INTEGER,
       references: {
         // TODO: Add a comment describing where `reader` comes from
+        //REPRESENTS THE REFERENCE SO WE CAN USE THEM 
         model: 'reader',
         key: 'id',
       },

@@ -3,14 +3,53 @@ const Book = require('../../models/Book');
 
 // TODO finish the PUT route to UPDATE a book in the database with a matching book_id
 router.put('/:book_id', (req, res) => {
-  
+
+Book.update(// getting data from parameters
+  {
+    // All the fields you can update and the data attached to the request body.
+    title: req.body.title,
+    author: req.body.author,
+    isbn: req.body.isbn,
+    pages: req.body.pages,
+    edition: req.body.edition,
+    is_paperback: req.body.is_paperback,
+  },
+  {
+    //req.params
+    where:{
+      book_id:req.params.book_id,
+    }, 
+
+  }
+  .then((updateBook_=>{
+
+    res.json(updateBook);
+
+  }) 
+  .catch(err)=> res.json(err)):
+// TODO finish the DELETE route to DELETE a book in the database with a matching book_id
+router.delete('/:book_id', (req, res) => {
+
+
+//req.parameters
+Book.destroy({
+  where: {
+    book_id: req.params.book_id,
+  },
+})
+  .then((deletedBook) => {
+    res.json(deletedBook);
+  })
+  .catch((err) => res.json(err));
+});
+
+router.post('/seed', (req, res)=>{
+
   
 });
 
-// TODO finish the DELETE route to DELETE a book in the database with a matching book_id
-router.delete('/:book_id', (req, res) => {
-  
-});
+module.exports = router
+
 
 router.post('/seed', (req, res) => {
   Book.bulkCreate([

@@ -11,6 +11,7 @@ class User extends Model {
       return false;
     }
   }
+  
 }
 
 User.init(

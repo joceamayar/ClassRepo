@@ -107,3 +107,13 @@ router.post('/seed', (req, res) => {
 });
 
 module.exports = router;
+
+
+//trun on force true then turn it off
+// Hit the end points: 
+// run server,js
+
+// Get - http://localhost:3001/api/books/seed
+
+//serach by id 
+//Get - http://localhost:3001/api/books/1

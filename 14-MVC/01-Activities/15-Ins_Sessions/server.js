@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 // Import express-session
-const session = require('express-session');
+const session = require('express-session');//require boiler plate
 const exphbs = require('express-handlebars');
 
 const routes = require('./controllers');
@@ -11,6 +11,8 @@ const helpers = require('./utils/helpers');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
+//Boiler plate 
 // Set up sessions
 const sess = {
   secret: 'Super secret secret',
@@ -32,5 +34,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Server listening on: http://localhost:' + PORT));
 });

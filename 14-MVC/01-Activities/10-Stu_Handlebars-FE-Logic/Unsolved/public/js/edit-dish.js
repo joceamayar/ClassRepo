@@ -5,7 +5,11 @@ async function editFormHandler(event) {
   const guest_name = document.querySelector('#guest_name').value;
   
   // TODO: What will the value of has_nuts be if the box in the form is checked? 
+
+
   // TODO: What do we call this kind of operator?
+  
+  
   const has_nuts = document.querySelector('#has_nuts:checked') ? true : false;
 
 // window.location gives us access to the URL. We then use the .split() method to access the number at the end of the URL and set that equal to id.
@@ -28,6 +32,7 @@ async function editFormHandler(event) {
   });
 
   // TODO: What happens if the response is ok?
+  // This is just refreshing the page 
   if (response.ok) {
     document.location.replace(`/dish/${id}`);
   } else {
@@ -36,3 +41,6 @@ async function editFormHandler(event) {
 }
 
 document.querySelector('.edit-dish-form').addEventListener('submit', editFormHandler);
+
+
+//anything in the public folder is part of the view. 

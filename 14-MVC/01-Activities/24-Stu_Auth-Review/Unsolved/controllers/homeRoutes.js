@@ -3,6 +3,8 @@ const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // TODO: Add a comment describing the functionality of the withAuth middleware
+//check the user is log i n 
+//Prevent 
 router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -15,6 +17,7 @@ router.get('/', withAuth, async (req, res) => {
     res.render('homepage', {
       users,
       // TODO: Add a comment describing the functionality of this property
+      //is checking if the user had been auntenticated or not 
       logged_in: req.session.logged_in,
     });
   } catch (err) {

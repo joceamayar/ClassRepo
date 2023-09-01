@@ -15,16 +15,22 @@ const PORT = process.env.PORT || 3001;
 
 // Sets up session and connect to our Sequelize db
 const sess = {
+  //secret- randomly generated, this is the key to generate our secure id. that will come from proccess
   secret: 'Super secret secret',
   // TODO: Add a comment describing the purpose of adding a cookies object to our options to our session object
+  //soters the data for the users 
   cookie: {
     // TODO: Add a comment describing the functionality of the maxAge attribute
+    // our session id expires in  1 hr - log in sessions last 1 hour 
     maxAge: 60 * 60 * 1000,
     // TODO: Add a comment describing the functionality of the httpOnly attribute
+    //Don't  give access to this cookie in javaScript if set to true
     httpOnly: true,
     // TODO: Add a comment describing the functionality of the secure attribute
+    //
     secure: false,
     // TODO: Add a comment describing the functionality of the sameSite attribute
+    //
     sameSite: 'strict',
   },
   resave: false,

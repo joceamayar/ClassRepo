@@ -20,11 +20,12 @@ async function newFormHandler(event) {
   });
   //if the dish is added, the 'all' template will be rerendered
   if (response.ok) {
-    document.location.replace('/');
+    document.location.replace('/'); //refreshes the page
   } else {
     alert('Failed to add dish');
   }
 }
 
 document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
-  
+
+

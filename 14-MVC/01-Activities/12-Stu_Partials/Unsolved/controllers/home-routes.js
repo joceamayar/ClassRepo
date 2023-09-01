@@ -52,6 +52,7 @@ router.get('/gallery/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+console.log(gallery);
 
 // GET one painting
 router.get('/painting/:id', async (req, res) => {

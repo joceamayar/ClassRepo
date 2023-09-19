@@ -38,6 +38,7 @@ app.use(express.json());
 
 app.post('/create', (req, res) => {
   // Use db connection to add a document
+  // req.body
   db.collection('petCollection').insertOne(
     { name: req.body.name, breed: req.body.breed }
   )

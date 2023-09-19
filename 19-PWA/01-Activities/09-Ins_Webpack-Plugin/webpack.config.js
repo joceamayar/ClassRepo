@@ -10,7 +10,7 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({ // this plugin will generate an html file that has the scrip on it
       template: './index.html',
       title: 'Webpack Plugin'
     })
@@ -34,3 +34,6 @@ module: {
   ],
  },
 };
+
+//loaders: load things for webpack, to grab input
+//plugins modifies 

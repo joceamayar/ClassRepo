@@ -7,6 +7,9 @@ const postSchema = new Schema(
     username: String,
     comments: [{ type: Schema.Types.ObjectId, ref: 'comment' }],
   },
+  //virtuals are properties that do not exist on our data base but , i can ask the server for the end point that is serving this data. this prperty only exist on the data that goes back to the client.  But it does not exist on the data bases,
+  // if we don't have this: property needs to be here 
+
   {
     toJSON: {
       virtuals: true,

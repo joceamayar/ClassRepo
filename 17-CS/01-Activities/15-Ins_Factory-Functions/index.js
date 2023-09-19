@@ -6,7 +6,8 @@ function createUser(name, age, city) {
         name: name,
         age: age,
         city: city
-    }
+    } // who ever uses this funtion is not allow to use user 
+    //Factory funtion a way mre flexible of creating objects. 
 
     // Return two inner functions.
     return {
@@ -28,3 +29,6 @@ const userOne = createUser('Beverly', 58, 'Phoenix')
 // Call the two methods attached to our `createUser` function to see if the user object is logging the correct values.
 userOne.introduceSelf()
 userOne.location()
+
+
+//factory funtions are helful to add funtionability

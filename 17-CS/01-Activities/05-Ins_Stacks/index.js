@@ -15,4 +15,19 @@ class Stack {
   }
 }
 
+
+
+let myNewStack = new Stack();
+myNewStack.push(10)
+myNewStack.push(20)
+myNewStack.push(30)
+
+console.log(myNewStack)
+myNewStack.pop()
+console.log(myNewStack)
+myNewStack.pop()
+console.log(myNewStack)
+myNewStack.pop()
+
+
 module.exports = Stack;

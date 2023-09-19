@@ -52,7 +52,7 @@ app.get('/read', (req, res) => {
     // find() returns all documents. Equivalent to `Select *` in SQL.
     .find()
     // sort() sorts in ascending or descending order
-    .sort({ letter: 1 })
+    .sort({ letter: 1 }) //acending
     // skips first returned document
     .skip(1)
     // limits returns to 10

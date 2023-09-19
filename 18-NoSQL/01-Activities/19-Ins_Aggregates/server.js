@@ -9,7 +9,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/sum-price', async (req, res) => {
+app.get('/report', async (req, res) => {
   try {
     // Call aggregate() on model
     const result = await Item

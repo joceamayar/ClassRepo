@@ -11,3 +11,10 @@ const fibonacci = (position) => {
 
 // TODO: What will this return?
 console.log(fibonacci(9));
+console.log(fibonacci(3));
+console.log(fibonacci(4));
+console.log(fibonacci(0));
+
+//fibonacci sequesce - can be representing in programming 
+
+//when a function calls it self 

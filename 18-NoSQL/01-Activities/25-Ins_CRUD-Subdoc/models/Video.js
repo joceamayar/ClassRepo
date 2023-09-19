@@ -6,7 +6,7 @@ const videoSchema = new Schema(
   {
     published: {
       type: Boolean,
-      default: false,
+      default: false,//don't need to pass
     },
     createdAt: {
       type: Date,

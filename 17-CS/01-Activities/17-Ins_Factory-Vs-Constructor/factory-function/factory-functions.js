@@ -1,3 +1,5 @@
+// Composition aproach is super flexible and you are able to share funtionability 
+
 // Instead of using inheritance with classes, we will be taking a composition based approach.
 // When designing a composition based approach we focus on what objects do instead of what they are.
 // Below we define the actions we want our factory functions to use.

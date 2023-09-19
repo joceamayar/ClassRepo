@@ -29,3 +29,9 @@ console.dir(myBank);
 // By console logging the outer function's variable we can see that the variables are not able to be accessed.
 console.log(checking);
 console.log(savings);
+
+
+//when a funtion ends the variable within tha fucntion sees to exist, however closures are an exemption. 
+//we retun an object and tha 
+//closure is an alternative to usin classes 
+//a benefit, we are able to hide variables so that the interfaces tha we create ar e harder to breack. 

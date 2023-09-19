@@ -24,7 +24,7 @@ const handleError = (err) => console.error(err);
 // We use the model to create individual documents that have the properties as defined in our schema
 Item
   .create({
-    item: 'banana',
+    item: 'orange',
     stockCount: 10,
     price: 1,
     inStock: true,
@@ -33,3 +33,8 @@ Item
   .catch(err => handleError(err));
 
 module.exports = Item;
+
+
+//mogoose - is a layer on top of mongo but been less permesive 
+//document will be a row 
+//

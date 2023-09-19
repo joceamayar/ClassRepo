@@ -1,6 +1,8 @@
 // Grab the target element
 const targetEl = document.getElementById('target');
 
+//const targetE1 = document.getElementById('taget');
+
 // Clear out the loading message that exists in the target element
 targetEl.innerHTML = '';
 

@@ -16,11 +16,11 @@ router.route('/').get(getVideos).post(createVideo);
 router
   .route('/:videoId')
   .get(getSingleVideo)
-  .put(updateVideo)
+  .put(updateVideo) //pasing a parameter throught the url 
   .delete(deleteVideo);
 
 // /api/videos/:videoId/responses
-router.route('/:videoId/responses').post(addVideoResponse);
+router.route('/:videoId/responses').post(addVideoResponse); //when we are dealing with subdocuments we are also 
 
 // /api/videos/:videoId/responses/:responseId
 router.route('/:videoId/responses/:responseId').delete(removeVideoResponse);

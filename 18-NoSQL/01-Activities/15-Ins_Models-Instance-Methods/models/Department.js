@@ -23,6 +23,7 @@ const Department = mongoose.model('Department', departmentSchema);
 const produce = new Department({ name: 'Produce', totalStock: 100 });
 
 // Documents have access to a range of built-in instance methods like get()
+//Build in methods 
 const responseGetInstance = produce.get('totalStock', String);
 console.log(
   `The value of the totalStock for this document in string form is ${responseGetInstance}`

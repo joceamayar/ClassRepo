@@ -1,6 +1,6 @@
 Step 1. Create a function that accepts a sorted array and the element we are searching for.
 
-Step 2. Define two variable which represent the start index and the end index of the given array.
+    Step 2. Define two variable which represent the start index and the end index of the given array.
 
 Step 3. While start index is less than or equal to end index we continue to loop through the given array.
 

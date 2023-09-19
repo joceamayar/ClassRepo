@@ -47,7 +47,7 @@ module.exports = {
   async updateVideo(req, res) {
     try {
       const video = await Video.findOneAndUpdate(
-        { _id: req.params.videoId },
+        { _id: req.params.videoId }, //getting data from.body
         { $set: req.body },
         { runValidators: true, new: true }
       );
@@ -110,7 +110,7 @@ module.exports = {
     try {
       const video = await Video.findOneAndUpdate(
         { _id: req.params.videoId },
-        { $pull: { reactions: { responseId: req.params.responseId } } },
+        { $pull: { responses: { reactionId: req.params.responseId } } },
         { runValidators: true, new: true }
       )
 

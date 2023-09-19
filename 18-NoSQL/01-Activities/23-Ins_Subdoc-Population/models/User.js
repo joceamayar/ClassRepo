@@ -6,10 +6,10 @@ const userSchema = new Schema(
     first: String,
     last: String,
     age: Number,
-    posts: [
+    posts: [ // an array of object ids 
       {
         type: Schema.Types.ObjectId,
-        ref: 'post',
+        ref: 'post',//that will be referencing post 
       },
     ],
   },

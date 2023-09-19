@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
 // TODO: Add a comment describing the functionality of the code below
+//bookschema is setting the properties restricting what is goig to pass 
+//for any new schema that is been imputed - create a post 
 const bookSchema = new mongoose.Schema({
   title: { type: String, required: true },
   author: { type: String, required: false },
@@ -12,11 +14,13 @@ const bookSchema = new mongoose.Schema({
 });
 
 // TODO: Add a comment describing the functionality of the code below
+//boiler plate so you can generate the schema,
 const Book = mongoose.model('Book', bookSchema);
 
 const handleError = (err) => console.error(err);
 
 // TODO: Add a comment describing the functionality of the code below
+// this will create an item 
 Book
   .create({
     title: 'Diary of Anne Frank',

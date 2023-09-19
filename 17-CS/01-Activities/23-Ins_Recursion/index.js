@@ -11,3 +11,6 @@ const countdown = (value) => {
 };
 
 countdown(10);
+
+// Recursion takes out a lot of memory 
+// you can only go to 16 thosned steps 

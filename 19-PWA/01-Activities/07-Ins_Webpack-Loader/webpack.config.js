@@ -18,7 +18,7 @@ module: {
       test: /\.m?js$/,
       exclude: /(node_modules|bower_components)/,
       use: {
-        loader: 'babel-loader',
+        loader: 'babel-loader',//to conver new versions of JS into old versions of JS this process is call "tranpile" this is due to browser compability so it can work in all the browsers
         options: {
           presets: ['@babel/preset-env']
         }

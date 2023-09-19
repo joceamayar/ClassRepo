@@ -47,9 +47,12 @@ seedDBAndStartServer();
 app.use(express.json());
 
 // TODO: Update route to use cursor methods
-app.get('/read', (req, res) => {
+app.get('/numbers', (req, res) => {
   db.collection('numberList')
     .find()
+    .sort({ number: 1 })
+    .skip(5)
+    .limit(5)
     .toArray()
     .then(results => res.send(results))
     .catch(err => {

@@ -11,6 +11,7 @@ HMR is an opt-in feature, so it only runs in modules that contain HMR code.
 It allows the developer to replace modules with new versions without having 
 to restart the app or refresh the page. This feature doesn't need to be 
 enabled on every module, because events will bubble up to the parent module. */
+//we NEED THIS CODE FOR HOT MODULE TO RUN at the top or root f the app
 if (module.hot) {
   module.hot.accept((err) => {
     if (err) {
@@ -18,3 +19,5 @@ if (module.hot) {
     }
   });
 }
+
+//npm run dev

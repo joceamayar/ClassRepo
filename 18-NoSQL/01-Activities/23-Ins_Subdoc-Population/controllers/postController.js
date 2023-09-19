@@ -3,7 +3,7 @@ const { Post, User } = require('../models');
 module.exports = {
   async getPosts(req, res) {
     try {
-      const posts = await Post.find();
+      const posts = await Post.find().populate("tags");
       res.json(posts);
     } catch (err) {
       res.status(500).json(err);

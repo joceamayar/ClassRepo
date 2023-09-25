@@ -3,9 +3,10 @@ import Header from './components/Header';
 import Card from './components/Card';
 
 // In our main App component, we are rendering only single instances of Header and Navbar and several instances of Card
-function App() {
+function App(propd) {
   return (
     <div>
+      {props.name}
       <Header />
       <Navbar />
       <Card />
@@ -16,3 +17,5 @@ function App() {
 }
 
 export default App;
+
+//jsx - html that has java scrips 

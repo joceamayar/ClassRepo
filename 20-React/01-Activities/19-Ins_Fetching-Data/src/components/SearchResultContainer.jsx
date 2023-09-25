@@ -18,6 +18,7 @@ const SearchResultContainer = () => {
   // The second argument is the dependency array. This means that this method will only run when the component first loads
   useEffect(() => {
     searchGiphy('kittens');
+    //setResults(Kittens.data);
   }, []);
 
   return (

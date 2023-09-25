@@ -4,6 +4,7 @@ export default function Display() {
   const [count, setCount] = useState(0);
 
   // When the component mounts to the VDOM, run this callback
+  //to put in local storage, to do our fetch request so we can render it, it runs everytime the page loads
   useEffect(() => {
     const storedCount = localStorage.getItem('myCount');
 
@@ -15,7 +16,8 @@ export default function Display() {
     }
   }, [])
 
-  // When the state changes run this callback
+  // When the state changes run this callback, we want this before rendering occurs
+  //this fuction will get call every time the count its updated, will run any time there is a change
   useEffect(() => {
     // Update the localStorage count variable using the setItem method
     localStorage.setItem('myCount', count);

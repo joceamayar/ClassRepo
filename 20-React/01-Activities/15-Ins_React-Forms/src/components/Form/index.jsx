@@ -3,6 +3,10 @@ import './style.css';
 
 function Form() {
   // Here we set two state variables for firstName and lastName using `useState`
+  // this object re renders eerytime we ask for first and last name 
+  //every time you type a letter on change 
+  //when we summit, when we change a letter
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 

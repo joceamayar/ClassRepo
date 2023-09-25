@@ -1,4 +1,8 @@
 // TODO: Add a comment explaining what is being passed to this "child" component as props
+// Props being passed to CardBody component:
+// - count: The current count value to display in the card text.
+// - handleIncrement: A function to be called when the Increment button is clicked.
+// - handleDecrement: A function to be called when the Decrement button is clicked.
 
 function CardBody(props) {
   return (

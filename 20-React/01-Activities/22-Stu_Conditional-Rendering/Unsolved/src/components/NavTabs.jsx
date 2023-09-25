@@ -1,5 +1,5 @@
 // TODO: Add a comment explaining how we are able to extract the key value pairs from props
-
+//We are distructuring, and then
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
@@ -19,7 +19,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           href="#about"
           onClick={() => handlePageChange('About')}
           //  TODO: Add a comment explaining what this logic is doing
-
+//Turnirary statements, fancy if statements 
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
         >
           About

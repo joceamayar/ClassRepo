@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementById("btn").addEventListener("click",(()=>{const t=document.getElementById("header1");""==t.textContent?t.textContent="Webpack is Working!":t.textContent=""}))})();

@@ -13,7 +13,8 @@ const resolvers = {
     },
     professors: async () => {
       return await Professor.find({}).populate('classes');
-    }
+    },
+ 
   }
 };
 

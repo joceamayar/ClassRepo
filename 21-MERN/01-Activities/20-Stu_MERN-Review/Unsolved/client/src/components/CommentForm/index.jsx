@@ -9,11 +9,12 @@ const CommentForm = ({ thoughtId }) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
-  const { addComment, loading, error } = useMutation(ADD_COMMENT, {
+  const [addComment, { data,loading,error} ] = useMutation(ADD_COMMENT, {
     variables: { thoughtId, commentText },
     refetchQueries: [
       QUERY_THOUGHTS,
       'getThoughts'
+
     ]
   });
 

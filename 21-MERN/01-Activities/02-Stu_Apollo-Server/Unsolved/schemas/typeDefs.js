@@ -1,3 +1,5 @@
+//This are our rotes 
+
 const typeDefs = `
   # TODO: Add a comment describing the functionality of this statement
   type Class {
@@ -8,6 +10,7 @@ const typeDefs = `
   }
 
   # TODO: Add a comment describing the functionality of this statement
+  #Defining our endpoints 
   type Query {
     classes: [Class]
   }

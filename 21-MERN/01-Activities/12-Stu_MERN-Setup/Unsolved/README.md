@@ -31,6 +31,11 @@
 ## Server-side Functionality
 
 * TODO: Add a comment describing the functionality of this block of code in `server/server.js`:
+// When in production mode, this block configures the Express app to serve static files
+// from the '../client/dist' directory, where the production-ready build of the client-side
+// application is located. Additionally, any unhandled routes will default to serving
+// the 'index.html' file from the same directory, ensuring that client-side routing
+// can handle the route appropriately.
 
 ```js
 if (process.env.NODE_ENV === 'production') {

@@ -16,6 +16,9 @@ const resolvers = {
 
     professors: async () => {
       return await Professor.find({}).populate('classes');
+    },
+    class: async (parent, {id}) => {
+      return await Class.findOne({_id:id});
     }
   }
 };

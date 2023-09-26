@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
 import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_PROFILES } from '../../utils/queries';
+import { QUERY_THOUGHTS } from '../../utils/queries';
 
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({
@@ -13,11 +13,12 @@ const ThoughtForm = () => {
 
   // Set up our mutation with an option to handle errors
   // TODO: Add comment describing the functionality of the useMutation second argument & refetchQueries property
+
   const [addThought, { error }] = useMutation
   (ADD_THOUGHT, {
     refetchQueries: [
-      QUERY_PROFILES,
-      'allProfiles'
+      QUERY_THOUGHTS,
+      // or 'allThoughts'
     ]
   });
 

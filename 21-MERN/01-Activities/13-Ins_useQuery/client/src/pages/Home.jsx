@@ -14,7 +14,7 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_PROFILES);
   
   // Important for useQuery: We use the optional chaining operator to get the resulting profile from our query, or fallback to an empty array if the query isn't resolved yet
-  const profiles = data?.profiles || [];
+  const profiles = data?.profiles || []; // if data is not pupulated jet for the firt render i want the data to be an empty array 
 
   return (
     <main>

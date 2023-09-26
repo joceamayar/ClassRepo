@@ -22,8 +22,8 @@ const resolvers = {
     addSchool: async (parent, { name, location, studentCount }) => {
       return await School.create({ name, location, studentCount });
     },
-    updateClass: async (parent, { id, building }) => {
-      return await Class.findOneAndUpdate({ _id: id }, { building });
+    updateClass: async (parent, { id, building, name,  creditHours }) => {
+      return await Class.findOneAndUpdate({ _id: id }, { building , name,creditHours}, {new:true});
     }
   }
 };
